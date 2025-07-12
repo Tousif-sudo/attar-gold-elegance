@@ -4,180 +4,128 @@ import { Sparkles, Award, Shield, Crown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/20 to-background">
-      {/* Background Elements */}
-      <div className="absolute inset-0 ornament-pattern-ultra opacity-40"></div>
-      <div className="absolute top-10 right-10 w-96 h-96 bg-gold-radial-ultra rounded-full opacity-15 blur-3xl animate-float"></div>
-      <div className="absolute bottom-10 left-10 w-80 h-80 bg-luxury-radial rounded-full opacity-20 blur-3xl animate-float-delayed"></div>
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden ornament-pattern-ultra bg-gradient-to-br from-background via-muted/30 to-background">
+      {/* Enhanced Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-primary/5 to-secondary/10"></div>
+      <div className="absolute top-20 right-20 w-72 h-72 sm:w-96 sm:h-96 lg:w-[30rem] lg:h-[30rem] bg-gold-radial-ultra rounded-full opacity-20 blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-luxury-radial rounded-full opacity-25 blur-3xl animate-float-delayed"></div>
 
-      <div className="container mx-auto px-4 py-16 relative z-10 max-w-6xl">
-        
-        {/* Main Content - Centered Layout */}
-        <div className="text-center space-y-8 lg:space-y-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 relative z-10 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-center min-h-[80vh]">
           
-          {/* Premium Badge */}
-          <div className="flex justify-center animate-fade-in-up">
-            <div className="premium-border-ultra p-1">
-              <div className="premium-border-inner-ultra flex items-center px-4 py-2 lg:px-6 lg:py-3">
-                <Sparkles className="w-4 h-4 lg:w-5 lg:h-5 text-primary mr-2 animate-luxury-pulse" />
-                <span className="text-primary font-semibold tracking-wider uppercase text-xs lg:text-sm">
-                  Premium Heritage Collection
-                </span>
-                <Award className="w-4 h-4 lg:w-5 lg:h-5 text-primary ml-2 animate-luxury-pulse" />
+          {/* Content Section - Left Side */}
+          <div className="text-center lg:text-left animate-fade-in-up order-2 lg:order-1 flex flex-col justify-center space-y-6 sm:space-y-8">
+            
+            {/* Premium Badge */}
+            <div className="flex items-center justify-center lg:justify-start">
+              <div className="premium-border-ultra p-1">
+                <div className="premium-border-inner-ultra flex items-center px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3">
+                  <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-primary mr-2 animate-luxury-pulse" />
+                  <span className="text-primary font-semibold tracking-wider uppercase text-xs sm:text-sm">Exclusive Heritage Collection</span>
+                  <Award className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-primary ml-2 animate-luxury-pulse" />
+                </div>
+              </div>
+            </div>
+            
+            {/* Main Heading - Improved Typography */}
+            <div className="space-y-2 sm:space-y-4">
+              <h1 className="font-playfair font-bold leading-[0.9] tracking-tight">
+                <span className="text-gradient-ultra block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-1 sm:mb-2">Exquisite</span>
+                <span className="text-foreground text-shadow-ultra block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-1 sm:mb-2">Royal Attar</span>
+                <span className="text-secondary font-cormorant block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Masterpieces</span>
+              </h1>
+            </div>
+            
+            {/* Description */}
+            <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
+              Experience the pinnacle of traditional perfumery with our exclusive collection 
+              of handcrafted attars, where ancient artistry meets contemporary sophistication.
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 justify-center lg:justify-start">
+              <button className="btn-premium-ultra text-white px-5 py-3 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-full font-bold text-sm sm:text-base lg:text-lg shadow-luxury-xl hover:scale-105 transition-all duration-300">
+                Explore Masterpieces
+              </button>
+              <button className="premium-border-ultra group">
+                <div className="premium-border-inner-ultra px-5 py-3 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-full font-bold text-sm sm:text-base lg:text-lg text-secondary hover:bg-secondary hover:text-white transition-all duration-500">
+                  Our Royal Legacy
+                </div>
+              </button>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-md mx-auto lg:mx-0 pt-4 sm:pt-6">
+              <div className="text-center backdrop-ultra-luxury rounded-xl p-3 sm:p-4 lg:p-6 shadow-luxury">
+                <div className="flex justify-center mb-2 sm:mb-3">
+                  <Crown className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-primary animate-luxury-pulse" />
+                </div>
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gradient-ultra mb-1">50+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground font-medium">Premium Scents</div>
+              </div>
+              <div className="text-center backdrop-ultra-luxury rounded-xl p-3 sm:p-4 lg:p-6 shadow-luxury">
+                <div className="flex justify-center mb-2 sm:mb-3">
+                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-primary animate-luxury-pulse" />
+                </div>
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gradient-ultra mb-1">25</div>
+                <div className="text-xs sm:text-sm text-muted-foreground font-medium">Years Heritage</div>
+              </div>
+              <div className="text-center backdrop-ultra-luxury rounded-xl p-3 sm:p-4 lg:p-6 shadow-luxury">
+                <div className="flex justify-center mb-2 sm:mb-3">
+                  <Award className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-primary animate-luxury-pulse" />
+                </div>
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gradient-ultra mb-1">10K+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground font-medium">Connoisseurs</div>
               </div>
             </div>
           </div>
-          
-          {/* Main Heading */}
-          <div className="space-y-4 animate-fade-in-up">
-            <h1 className="font-playfair font-bold leading-tight tracking-tight">
-              <span className="text-gradient-ultra block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-2">
-                Royal Attar
-              </span>
-              <span className="text-foreground text-shadow-ultra block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-2">
-                Collection
-              </span>
-              <span className="text-secondary font-cormorant block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-                Handcrafted Excellence
-              </span>
-            </h1>
-          </div>
-          
-          {/* Description */}
-          <div className="max-w-3xl mx-auto animate-fade-in-up">
-            <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-muted-foreground leading-relaxed font-light">
-              Discover the art of traditional perfumery with our exclusive collection of premium attars. 
-              Each bottle represents centuries of craftsmanship and the finest natural ingredients.
-            </p>
-          </div>
 
-          {/* Attar Bottles Display */}
-          <div className="flex justify-center items-center py-8 lg:py-12 animate-scale-in">
-            <div className="relative">
+          {/* Attar Bottle Image Section - Right Side */}
+          <div className="relative animate-scale-in flex justify-center lg:justify-end order-1 lg:order-2">
+            <div className="relative z-10 w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
               
-              {/* Main Attar Bottle */}
-              <div className="premium-border-ultra p-2 shadow-ultra-premium">
-                <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 lg:p-12 shadow-luxury-xl backdrop-blur-sm relative overflow-hidden">
+              {/* Main Image Container with Premium Frame */}
+              <div className="premium-border-ultra p-2 sm:p-3 shadow-ultra-premium">
+                <div className="bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl p-6 sm:p-8 lg:p-12 xl:p-16 shadow-luxury-xl backdrop-blur-sm relative overflow-hidden">
                   
-                  <div className="relative w-64 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-[30rem] mx-auto flex items-center justify-center">
+                  {/* Premium Attar Bottle */}
+                  <div className="relative w-full h-64 sm:h-80 lg:h-96 xl:h-[28rem] flex items-center justify-center">
                     
-                    {/* Premium Attar Bottle Design */}
-                    <div className="relative w-full h-full">
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/20 to-secondary/30 rounded-full blur-2xl animate-luxury-pulse"></div>
+                    {/* Use the uploaded attar bottle image */}
+                    <div className="relative w-full h-full max-w-[240px] sm:max-w-[280px] lg:max-w-[320px] xl:max-w-[380px]">
+                      <img 
+                        src="/lovable-uploads/0dd57f27-f2b5-4da4-b542-6ceb8b3b6a2d.png" 
+                        alt="Premium Royal Attar Bottle"
+                        className="w-full h-full object-contain drop-shadow-2xl filter brightness-110 contrast-110 saturate-110"
+                      />
                       
-                      {/* Bottle SVG Design */}
-                      <svg viewBox="0 0 200 300" className="w-full h-full drop-shadow-2xl">
-                        {/* Bottle Body */}
-                        <defs>
-                          <linearGradient id="bottleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="#F7DC6F" stopOpacity="0.9"/>
-                            <stop offset="50%" stopColor="#FFD700" stopOpacity="0.7"/>
-                            <stop offset="100%" stopColor="#DAA520" stopOpacity="0.9"/>
-                          </linearGradient>
-                          <linearGradient id="liquidGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="#8B4513" stopOpacity="0.8"/>
-                            <stop offset="50%" stopColor="#D4AF37" stopOpacity="0.6"/>
-                            <stop offset="100%" stopColor="#B8860B" stopOpacity="0.8"/>
-                          </linearGradient>
-                        </defs>
-                        
-                        {/* Main Bottle Shape */}
-                        <path d="M60 80 L60 250 Q60 270 80 270 L120 270 Q140 270 140 250 L140 80 Z" 
-                              fill="url(#bottleGradient)" 
-                              stroke="#DAA520" 
-                              strokeWidth="2"/>
-                        
-                        {/* Liquid Inside */}
-                        <path d="M65 85 L65 245 Q65 265 85 265 L115 265 Q135 265 135 245 L135 85 Z" 
-                              fill="url(#liquidGradient)"/>
-                        
-                        {/* Bottle Neck */}
-                        <rect x="85" y="60" width="30" height="25" 
-                              fill="url(#bottleGradient)" 
-                              stroke="#DAA520" 
-                              strokeWidth="2"/>
-                        
-                        {/* Ornate Stopper */}
-                        <circle cx="100" cy="50" r="15" 
-                                fill="#FFD700" 
-                                stroke="#B8860B" 
-                                strokeWidth="2"/>
-                        <circle cx="100" cy="45" r="8" 
-                                fill="#DAA520"/>
-                        
-                        {/* Decorative Elements */}
-                        <circle cx="100" cy="150" r="3" fill="#FFD700" opacity="0.8"/>
-                        <circle cx="100" cy="180" r="2" fill="#DAA520" opacity="0.6"/>
-                        <circle cx="100" cy="210" r="2.5" fill="#FFD700" opacity="0.7"/>
-                        
-                        {/* Arabic Pattern */}
-                        <path d="M80 120 Q100 110 120 120 Q100 130 80 120" 
-                              fill="none" 
-                              stroke="#DAA520" 
-                              strokeWidth="1.5" 
-                              opacity="0.8"/>
-                        <path d="M80 160 Q100 150 120 160 Q100 170 80 160" 
-                              fill="none" 
-                              stroke="#DAA520" 
-                              strokeWidth="1.5" 
-                              opacity="0.8"/>
-                      </svg>
+                      {/* Luxury Glow Effect around the bottle */}
+                      <div className="absolute inset-0 bg-gradient-radial from-primary/30 via-primary/10 to-transparent rounded-full blur-2xl animate-luxury-pulse opacity-60"></div>
+                      
+                      {/* Shimmer Effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer rounded-full" style={{backgroundSize: '200% 100%'}}></div>
                     </div>
                   </div>
                   
-                  {/* Floating Decoration Elements */}
-                  <div className="absolute top-4 left-4 w-4 h-4 bg-primary/60 rounded-full animate-float opacity-70"></div>
-                  <div className="absolute bottom-6 right-6 w-6 h-6 bg-secondary/60 rounded-full animate-float-delayed opacity-60"></div>
-                  <div className="absolute top-20 right-8 w-3 h-3 bg-primary/50 rounded-full animate-float opacity-50"></div>
+                  {/* Decorative Floating Elements */}
+                  <div className="absolute top-4 left-4 w-3 h-3 sm:w-4 sm:h-4 lg:w-6 lg:h-6 bg-primary/60 rounded-full animate-float opacity-70"></div>
+                  <div className="absolute bottom-4 right-4 w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8 bg-secondary/60 rounded-full animate-float-delayed opacity-60"></div>
+                  <div className="absolute top-16 right-8 w-2 h-2 sm:w-3 sm:h-3 bg-primary/50 rounded-full animate-float opacity-50"></div>
+                  
+                  {/* Background Ambient Glow */}
+                  <div className="absolute inset-0 bg-gradient-radial from-primary/15 via-transparent to-secondary/15 rounded-2xl blur-xl animate-luxury-pulse"></div>
                 </div>
               </div>
               
-              {/* Quality Badge */}
-              <div className="absolute -bottom-6 -right-6 premium-border-ultra p-1">
-                <div className="premium-border-inner-ultra px-4 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-sm font-bold shadow-luxury">
-                  <span className="flex items-center gap-2">
-                    <Crown className="w-4 h-4" />
+              {/* Additional Premium Badge */}
+              <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 premium-border-ultra p-1">
+                <div className="premium-border-inner-ultra px-3 py-2 sm:px-4 sm:py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-xs sm:text-sm font-bold shadow-luxury">
+                  <span className="flex items-center gap-1 sm:gap-2">
+                    <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
                     Premium Quality
                   </span>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center items-center animate-fade-in-up">
-            <button className="btn-premium-ultra text-white px-8 py-4 lg:px-10 lg:py-5 rounded-full font-bold text-base lg:text-lg shadow-luxury-xl hover:scale-105 transition-all duration-300">
-              Explore Collection
-            </button>
-            <button className="premium-border-ultra group">
-              <div className="premium-border-inner-ultra px-8 py-4 lg:px-10 lg:py-5 rounded-full font-bold text-base lg:text-lg text-secondary hover:bg-secondary hover:text-white transition-all duration-500">
-                Our Heritage Story
-              </div>
-            </button>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="grid grid-cols-3 gap-6 lg:gap-8 max-w-2xl mx-auto pt-8 animate-fade-in-up">
-            <div className="text-center backdrop-ultra-luxury rounded-xl p-6 lg:p-8 shadow-luxury">
-              <div className="flex justify-center mb-3">
-                <Crown className="w-8 h-8 lg:w-10 lg:h-10 text-primary animate-luxury-pulse" />
-              </div>
-              <div className="text-2xl lg:text-3xl font-bold text-gradient-ultra mb-2">50+</div>
-              <div className="text-sm lg:text-base text-muted-foreground font-medium">Premium Scents</div>
-            </div>
-            <div className="text-center backdrop-ultra-luxury rounded-xl p-6 lg:p-8 shadow-luxury">
-              <div className="flex justify-center mb-3">
-                <Shield className="w-8 h-8 lg:w-10 lg:h-10 text-primary animate-luxury-pulse" />
-              </div>
-              <div className="text-2xl lg:text-3xl font-bold text-gradient-ultra mb-2">25</div>
-              <div className="text-sm lg:text-base text-muted-foreground font-medium">Years Heritage</div>
-            </div>
-            <div className="text-center backdrop-ultra-luxury rounded-xl p-6 lg:p-8 shadow-luxury">
-              <div className="flex justify-center mb-3">
-                <Award className="w-8 h-8 lg:w-10 lg:h-10 text-primary animate-luxury-pulse" />
-              </div>
-              <div className="text-2xl lg:text-3xl font-bold text-gradient-ultra mb-2">10K+</div>
-              <div className="text-sm lg:text-base text-muted-foreground font-medium">Satisfied Customers</div>
             </div>
           </div>
         </div>
